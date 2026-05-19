@@ -65,4 +65,29 @@ body{
         filter:brightness(0.92);
     }
 
+}.spotlight{
+
+    position:absolute;
+
+    width:260px;
+    height:70px;
+
+    border-radius:20px;
+
+    background:
+    radial-gradient(
+        rgba(255,210,120,0.30),
+        rgba(255,210,120,0)
+    );
+
+    transform:translate(-50%,-50%);
+
+    transition:
+    top 1.8s ease,
+    left 1.8s ease;
+
+    pointer-events:none;
+
+    mix-blend-mode:screen;
+
 }

@@ -107,4 +107,42 @@ body{
         transform:scale(1);
     }
 
+}@keyframes moveFocus{
+
+    0%{
+        top:58%;
+        left:12%;
+        opacity:0.25;
+    }
+
+    20%{
+        top:50%;
+        left:18%;
+        opacity:0.55;
+    }
+
+    40%{
+        top:67%;
+        left:22%;
+        opacity:0.35;
+    }
+
+    60%{
+        top:54%;
+        left:60%;
+        opacity:0.55;
+    }
+
+    80%{
+        top:72%;
+        left:68%;
+        opacity:0.3;
+    }
+
+    100%{
+        top:58%;
+        left:12%;
+        opacity:0.25;
+    }
+
 }

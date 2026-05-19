@@ -1,0 +1,23 @@
+body{
+  background:#000;
+}
+
+.menu-image{
+  animation: hotGlow 6s ease-in-out infinite;
+}
+
+@keyframes hotGlow{
+
+  0%{
+    filter:brightness(1);
+  }
+
+  50%{
+    filter:brightness(1.08);
+  }
+
+  100%{
+    filter:brightness(1);
+  }
+
+}

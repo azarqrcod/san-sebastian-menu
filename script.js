@@ -1,4 +1,4 @@
-const hour = 8;
+const hour = new Date().getHours();
 
 if(hour >= 6 && hour < 12){
 

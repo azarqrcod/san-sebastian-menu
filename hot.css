@@ -46,3 +46,46 @@ body{
     }
 
 }
+.focus-light{
+
+    position:absolute;
+
+    width:220px;
+    height:80px;
+
+    border-radius:20px;
+
+    background:
+    radial-gradient(
+    rgba(255,190,100,0.22),
+    rgba(255,190,100,0)
+    );
+
+    top:58%;
+    left:18%;
+
+    animation:
+    focusPulse 4s ease-in-out infinite;
+
+    pointer-events:none;
+
+}
+
+@keyframes focusPulse{
+
+    0%{
+        opacity:0.2;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:0.55;
+        transform:scale(1.04);
+    }
+
+    100%{
+        opacity:0.2;
+        transform:scale(1);
+    }
+
+}

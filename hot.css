@@ -5,14 +5,14 @@ body{
 }
 
 .container{
-    position:relative;
-
     width:100vw;
     height:100vh;
 
     display:flex;
     justify-content:center;
     align-items:center;
+
+    overflow:hidden;
 }
 
 .menu-image{
@@ -22,127 +22,47 @@ body{
 
     object-fit:contain;
 
-    position:relative;
-    z-index:1;
-
     animation:
-    breathing 8s ease-in-out infinite,
-    hotGlow 6s ease-in-out infinite;
+    cinematicMove 18s ease-in-out infinite,
+    cinematicLight 10s ease-in-out infinite;
 }
 
-@keyframes breathing{
+@keyframes cinematicMove{
 
     0%{
-        transform:scale(1);
+        transform:scale(1) translateX(0px);
+    }
+
+    25%{
+        transform:scale(1.03) translateX(-8px);
     }
 
     50%{
-        transform:scale(1.01);
+        transform:scale(1.05) translateX(6px);
+    }
+
+    75%{
+        transform:scale(1.02) translateX(-4px);
     }
 
     100%{
-        transform:scale(1);
+        transform:scale(1) translateX(0px);
     }
 
 }
 
-@keyframes hotGlow{
+@keyframes cinematicLight{
 
     0%{
-        filter:brightness(1);
+        filter:brightness(0.92);
     }
 
     50%{
-        filter:brightness(1.06);
+        filter:brightness(1.08);
     }
 
     100%{
-        filter:brightness(1);
-    }
-
-}
-
-.focus-light{
-
-    position:absolute;
-
-    width:340px;
-    height:140px;
-
-    border-radius:40px;
-
-    background:
-    radial-gradient(
-        rgba(255,210,120,0.55),
-        rgba(255,190,100,0)
-    );
-
-    top:58%;
-    left:10%;
-
-    z-index:5;
-
-    mix-blend-mode:screen;
-
-    animation:
-    moveFocus 18s linear infinite;
-
-    pointer-events:none;
-}
-
-@keyframes focusPulse{
-
-    0%{
-        opacity:0.2;
-        transform:scale(1);
-    }
-
-    50%{
-        opacity:0.8;
-        transform:scale(1.08);
-    }
-
-    100%{
-        opacity:0.2;
-        transform:scale(1);
-    }
-
-}@keyframes moveFocus{
-
-    0%{
-        top:58%;
-        left:12%;
-        opacity:0.25;
-    }
-
-    20%{
-        top:50%;
-        left:18%;
-        opacity:0.55;
-    }
-
-    40%{
-        top:67%;
-        left:22%;
-        opacity:0.35;
-    }
-
-    60%{
-        top:54%;
-        left:60%;
-        opacity:0.55;
-    }
-
-    80%{
-        top:72%;
-        left:68%;
-        opacity:0.3;
-    }
-
-    100%{
-        top:58%;
-        left:12%;
-        opacity:0.25;
+        filter:brightness(0.92);
     }
 
 }

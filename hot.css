@@ -1,18 +1,31 @@
 body{
+    margin:0;
     background:#000;
     overflow:hidden;
 }
 
-.menu-image{
+.container{
+    position:relative;
+    width:100vw;
+    height:100vh;
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.menu-image{
     width:100%;
     height:100vh;
+
     object-fit:contain;
+
+    position:relative;
+    z-index:1;
 
     animation:
     breathing 8s ease-in-out infinite,
     hotGlow 6s ease-in-out infinite;
-
 }
 
 @keyframes breathing{
@@ -46,6 +59,7 @@ body{
     }
 
 }
+
 .focus-light{
 
     position:absolute;
@@ -57,18 +71,19 @@ body{
 
     background:
     radial-gradient(
-    rgba(255,190,100,0.22),
-    rgba(255,190,100,0)
+        rgba(255,190,100,0.22),
+        rgba(255,190,100,0)
     );
 
     top:58%;
     left:18%;
 
+    z-index:2;
+
     animation:
     focusPulse 4s ease-in-out infinite;
 
     pointer-events:none;
-
 }
 
 @keyframes focusPulse{

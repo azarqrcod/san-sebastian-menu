@@ -1,23 +1,48 @@
 body{
-  background:#000;
+    background:#000;
+    overflow:hidden;
 }
 
 .menu-image{
-  animation: hotGlow 6s ease-in-out infinite;
+
+    width:100%;
+    height:100vh;
+    object-fit:contain;
+
+    animation:
+    breathing 8s ease-in-out infinite,
+    hotGlow 6s ease-in-out infinite;
+
+}
+
+@keyframes breathing{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.01);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
 }
 
 @keyframes hotGlow{
 
-  0%{
-    filter:brightness(1);
-  }
+    0%{
+        filter:brightness(1);
+    }
 
-  50%{
-    filter:brightness(1.08);
-  }
+    50%{
+        filter:brightness(1.06);
+    }
 
-  100%{
-    filter:brightness(1);
-  }
+    100%{
+        filter:brightness(1);
+    }
 
 }

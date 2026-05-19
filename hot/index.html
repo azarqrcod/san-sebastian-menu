@@ -1,24 +1,51 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Hot Drinks</title>
-
-  <link rel="stylesheet" href="../style.css">
-
-</head>
-
 <body>
 
-  <div class="container fade">
+<div class="container fade">
 
     <img src="../assets/images/hot.png" class="menu-image">
-<div class="focus-light"></div>
-    
-  </div>
 
-  <script src="../script.js"></script>
+    <div class="spotlight"></div>
+
+</div>
+
+<script src="../script.js"></script>
+
+<script>
+
+const spotlight = document.querySelector(".spotlight");
+
+const positions = [
+
+    { top:"36%", left:"27%" },
+    { top:"44%", left:"27%" },
+    { top:"52%", left:"27%" },
+    { top:"61%", left:"27%" },
+
+    { top:"36%", left:"73%" },
+    { top:"48%", left:"73%" },
+    { top:"61%", left:"73%" }
+
+];
+
+let current = 0;
+
+function moveSpotlight(){
+
+    spotlight.style.top = positions[current].top;
+    spotlight.style.left = positions[current].left;
+
+    current++;
+
+    if(current >= positions.length){
+        current = 0;
+    }
+
+}
+
+moveSpotlight();
+
+setInterval(moveSpotlight, 4000);
+
+</script>
 
 </body>
-
-</html>

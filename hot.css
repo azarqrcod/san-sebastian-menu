@@ -75,11 +75,12 @@ height:45px;
 
     border-radius:20px;
 
-    background:
-    radial-gradient(
-        rgba(255,210,120,0.30),
-        rgba(255,210,120,0)
-    );
+        background:
+radial-gradient(
+rgba(255,215,120,0.30),
+rgba(255,180,80,0.12),
+rgba(255,180,80,0)
+);
 
     transform:translate(-50%,-50%);
 

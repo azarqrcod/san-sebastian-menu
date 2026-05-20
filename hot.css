@@ -99,19 +99,39 @@ height:45px;
 .spotlight{
 
     position:absolute;
+.spotlight{
 
-    width:260px;
-    height:70px;
+position:absolute;
 
-    top:36%;
-    left:27%;
+width:120px;
+height:32px;
 
-    transform:translate(-50%,-50%);
+top:36%;
+left:27%;
 
-    border:2px solid rgba(255,80,80,0.7);
+transform:translate(-50%,-50%);
 
-    background:rgba(255,0,0,0.25);
+border-radius:14px;
 
-    z-index:9999;
+border:1.5px solid rgba(255,90,90,0.55);
+
+background:
+radial-gradient(
+rgba(255,120,120,0.18),
+rgba(255,120,120,0)
+);
+
+box-shadow:
+0 0 12px rgba(255,80,80,0.22);
+
+transition:
+top 1.8s ease,
+left 1.8s ease;
+
+pointer-events:none;
+
+mix-blend-mode:screen;
+
+z-index:9999;
 
 }

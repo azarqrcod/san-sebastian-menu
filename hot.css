@@ -7,6 +7,8 @@ background:black;
 
 overflow:hidden;
 
+font-family:sans-serif;
+
 }
 
 .container{
@@ -14,13 +16,10 @@ overflow:hidden;
 position:relative;
 
 width:100vw;
-
 height:100vh;
 
 display:flex;
-
 justify-content:center;
-
 align-items:center;
 
 overflow:hidden;
@@ -29,9 +28,8 @@ overflow:hidden;
 
 .menu-image{
 
-width:100%;
-
-height:100%;
+width:100vw;
+height:100vh;
 
 object-fit:contain;
 
@@ -39,103 +37,23 @@ display:block;
 
 }
 
-@keyframes cinematicMove{
+.spotlight{
 
-    0%{
-        transform:scale(1) translateX(0px);
-    }
+position:absolute;
 
-    25%{
-        transform:scale(1.03) translateX(-8px);
-    }
-
-    50%{
-        transform:scale(1.05) translateX(6px);
-    }
-
-    75%{
-        transform:scale(1.02) translateX(-4px);
-    }
-
-    100%{
-        transform:scale(1) translateX(0px);
-    }
-
-}
-
-@keyframes cinematicLight{
-
-    0%{
-        filter:brightness(0.92);
-    }
-
-    50%{
-        filter:brightness(1.08);
-    }
-
-    100%{
-        filter:brightness(0.92);
-    }
-
-}.spotlight{
-
-    position:absolute;
-
-    width:180px;
+width:160px;
 height:45px;
-    
 
-    border-radius:20px;
+border-radius:20px;
 
-        background:
+background:
 radial-gradient(
 rgba(255,215,120,0.30),
 rgba(255,180,80,0.12),
 rgba(255,180,80,0)
 );
 
-    transform:translate(-50%,-50%);
-
-    transition:
-    top 1.8s ease,
-    left 1.8s ease;
-
-    pointer-events:none;
-
-    mix-blend-mode:screen;
-
-}
-.container{
-    position:relative;
-}
-
-.spotlight{
-
-    position:absolute;
-.spotlight{
-
-position:absolute;
-
-width:90px;
-height:26px;
-
-top:36%;
-left:27%;
-
 transform:translate(-50%,-50%);
-
-border-radius:14px;
-
-border:1.5px solid rgba(255,90,90,0.55);
-
-background:
-radial-gradient(
-rgba(255,120,120,0.18),
-rgba(255,120,120,0)
-);
-
-box-shadow:
-0 0 12px rgba(255,80,80,0.22);
 
 transition:
 top 1.8s ease,
@@ -146,6 +64,8 @@ pointer-events:none;
 mix-blend-mode:screen;
 
 z-index:9999;
+
+}
 
 .recommend-text{
 
@@ -172,23 +92,5 @@ pointer-events:none;
 white-space:nowrap;
 
 z-index:9999;
-
-}
-letter-spacing:4px;
-
-color:rgba(255,220,150,0.88);
-
-font-family:sans-serif;
-
-text-transform:uppercase;
-
-text-shadow:
-0 0 12px rgba(255,190,90,0.18);
-
-opacity:0.82;
-
-pointer-events:none;
-
-z-index:10000;
 
 }

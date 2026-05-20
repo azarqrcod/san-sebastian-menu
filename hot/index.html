@@ -23,11 +23,14 @@
 
 <script>
 
-const spotlight = document.querySelector(".spotlight");
-    const recommendText =
+const spotlight =
+document.querySelector(".spotlight");
+
+const recommendText =
 document.querySelector(".recommend-text");
+
 const positions = [
-    
+
     { top:"36%", left:"24%" },
     { top:"44%", left:"24%" },
     { top:"52%", left:"24%" },
@@ -41,27 +44,34 @@ const positions = [
 
 const labels = [
 
-"BEST SELLER",
+    "BEST SELLER",
 
-"TRENDING NOW",
+    "TRENDING NOW",
 
-"MOST LOVED",
+    "MOST LOVED",
 
-"CHEF PICK",
+    "CHEF PICK",
 
-"EVENING CHOICE",
+    "EVENING CHOICE",
 
-"SIGNATURE",
+    "SIGNATURE",
 
-"FRESH FAVORITE"
+    "FRESH FAVORITE"
 
 ];
+
 let current = 0;
 
 function moveSpotlight(){
 
-    spotlight.style.top = positions[current].top;
-    spotlight.style.left = positions[current].left;
+    spotlight.style.top =
+    positions[current].top;
+
+    spotlight.style.left =
+    positions[current].left;
+
+    recommendText.innerText =
+    labels[current];
 
     current++;
 
@@ -76,7 +86,3 @@ moveSpotlight();
 setInterval(moveSpotlight, 4000);
 
 </script>
-
-</body>
-
-</html>

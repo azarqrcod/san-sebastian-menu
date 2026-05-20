@@ -136,3 +136,33 @@ mix-blend-mode:screen;
 z-index:9999;
 
 }
+.recommend-text{
+
+position:absolute;
+
+bottom:7%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:13px;
+
+letter-spacing:4px;
+
+color:rgba(255,220,150,0.88);
+
+font-family:sans-serif;
+
+text-transform:uppercase;
+
+text-shadow:
+0 0 12px rgba(255,190,90,0.18);
+
+opacity:0.82;
+
+pointer-events:none;
+
+z-index:10000;
+
+}

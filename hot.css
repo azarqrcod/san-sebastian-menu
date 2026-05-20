@@ -1,10 +1,6 @@
 body{
     margin:0;
 padding:0;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
 background:black;
 overflow:auto;
 }
@@ -17,11 +13,7 @@ width:100%;
 
 max-width:1400px;
 
-display:flex;
-
-justify-content:center;
-
-align-items:center;
+margin:auto;
 
 }
 
@@ -143,18 +135,6 @@ mix-blend-mode:screen;
 
 z-index:9999;
 
-}
-.recommend-text{
-
-position:absolute;
-
-bottom:14%;
-
-left:50%;
-
-transform:translateX(-50%);
-
-font-size:13px;
 .recommend-text{
 
 position:absolute;
@@ -171,18 +151,15 @@ letter-spacing:4px;
 
 color:rgba(255,220,150,0.88);
 
-font-family:sans-serif;
+font-weight:600;
 
-text-transform:uppercase;
-
-text-shadow:
-0 0 12px rgba(255,190,90,0.18);
-
-opacity:0.82;
+text-shadow:0 0 10px rgba(255,180,80,0.45);
 
 pointer-events:none;
 
-z-index:10000;
+white-space:nowrap;
+
+z-index:9999;
 
 }
 letter-spacing:4px;

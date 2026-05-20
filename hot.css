@@ -33,6 +33,8 @@ height:100vh;
 
 object-fit:contain;
 
+object-position:center top;
+
 display:block;
 
 }
@@ -81,11 +83,19 @@ font-size:13px;
 
 letter-spacing:4px;
 
-color:rgba(255,220,150,0.88);
+color:rgba(255,220,150,0.95);
 
 font-weight:600;
 
 text-shadow:0 0 10px rgba(255,180,80,0.45);
+
+background:rgba(0,0,0,0.45);
+
+padding:6px 14px;
+
+border-radius:20px;
+
+backdrop-filter:blur(4px);
 
 pointer-events:none;
 

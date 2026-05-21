@@ -133,15 +133,42 @@ z-index:9999;
     pointer-events:none;
 }
 
+.steam{
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    background:
+    radial-gradient(
+        ellipse at center,
+        rgba(255,255,255,0.10) 0%,
+        rgba(255,255,255,0.04) 35%,
+        rgba(255,255,255,0) 75%
+    );
+
+    border-radius:50%;
+
+    filter:blur(28px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    mix-blend-mode:screen;
+
+    animation:steamMove 8s infinite ease-out;
+}
+
 .steam1{
-    bottom:17%;
-    left:30%;
+    bottom:18%;
+    left:29%;
 }
 
 .steam2{
     bottom:18%;
-    left:77%;
-    animation-delay:3s;
+    left:76%;
+    animation-delay:4s;
 }
 
 @keyframes steamMove{
@@ -149,19 +176,25 @@ z-index:9999;
     0%{
         transform:
         translateY(0px)
-        scale(0.7);
+        translateX(0px)
+        scale(0.55);
 
         opacity:0;
     }
 
-    20%{
-        opacity:0.22;
+    15%{
+        opacity:0.10;
+    }
+
+    45%{
+        opacity:0.16;
     }
 
     100%{
         transform:
-        translateY(-80px)
-        scale(1.4);
+        translateY(-120px)
+        translateX(12px)
+        scale(1.8);
 
         opacity:0;
     }

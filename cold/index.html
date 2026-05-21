@@ -1,1 +1,98 @@
-<h1>Cold Drinks Menu</h1>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="google" content="notranslate">
+
+<title>Cold Drinks</title>
+
+<link rel="stylesheet" href="../hot.css">
+
+</head>
+
+<body>
+
+    <img src="../assets/images/cold.png" class="menu-image">
+
+<div class="top-message notranslate">
+    Danke für Ihr Vertrauen
+</div>
+
+<div class="spotlight"></div>
+
+<div class="smoke left"></div>
+
+<div class="smoke right"></div>
+
+<script src="../script.js"></script>
+
+<script>
+
+const spotlight =
+document.querySelector(".spotlight");
+
+const recommendText =
+document.querySelector(".recommend-text");
+
+const positions = [
+
+    { top:"36%", left:"24%" },
+    { top:"44%", left:"24%" },
+    { top:"52%", left:"24%" },
+    { top:"60%", left:"24%" },
+
+    { top:"36%", left:"69%" },
+    { top:"48%", left:"69%" },
+    { top:"60%", left:"69%" }
+
+];
+
+const labels = [
+
+    "BEST SELLER",
+
+    "TRENDING NOW",
+
+    "MOST LOVED",
+
+    "CHEF PICK",
+
+    "EVENING CHOICE",
+
+    "SIGNATURE",
+
+    "FRESH FAVORITE"
+
+];
+
+let current = 0;
+
+function moveSpotlight(){
+
+    spotlight.style.top =
+    positions[current].top;
+
+    spotlight.style.left =
+    positions[current].left;
+
+    recommendText.innerText =
+    labels[current];
+
+    current++;
+
+    if(current >= positions.length){
+        current = 0;
+    }
+
+}
+
+moveSpotlight();
+
+setInterval(moveSpotlight, 4000);
+
+</script>
+.notranslate{
+    translate:no;
+}

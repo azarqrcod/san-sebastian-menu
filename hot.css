@@ -29,33 +29,31 @@ body{
 .menu-image{
     width:100%;
     height:100%;
+
     object-fit:contain;
 
     display:block;
 }
 
-/* spotlight */
+/* نور متحرک */
 
 .spotlight{
-
     position:absolute;
 
-    width:170px;
-    height:48px;
+    width:180px;
+    height:45px;
 
     border-radius:30px;
 
     background:
     radial-gradient(
-        rgba(255,215,120,0.32),
-        rgba(255,180,80,0.10),
+        rgba(255,215,120,0.35),
+        rgba(255,180,80,0.12),
         rgba(255,180,80,0)
     );
 
     box-shadow:
-    0 0 20px rgba(255,190,90,0.28);
-
-    transform:translate(-50%,-50%);
+    0 0 25px rgba(255,190,120,0.28);
 
     transition:
     top 1.8s ease,
@@ -64,179 +62,138 @@ body{
     pointer-events:none;
 
     mix-blend-mode:screen;
-
-    z-index:5;
 }
 
-/* steam */
-
-.steam{
-
-    position:absolute;
-
-    width:120px;
-    height:170px;
-
-    background:
-    radial-gradient(
-        ellipse at center,
-        rgba(255,255,255,0.55) 0%,
-        rgba(255,255,255,0.25) 28%,
-        rgba(255,255,255,0.08) 55%,
-        rgba(255,255,255,0) 80%
-    );
-
-    border-radius:50%;
-
-    filter:blur(10px);
-
-    opacity:0;
-
-    pointer-events:none;
-
-    mix-blend-mode:screen;
-
-    animation:steamMove 5s infinite ease-out;
-
-    z-index:4;
-}
-
-.steam1{
-    bottom:16%;
-    left:31%;
-}
-
-.steam2{
-    bottom:16%;
-    left:77%;
-    animation-delay:2.5s;
-}
-
-@keyframes steamMove{
-
-    0%{
-        transform:
-        translateY(0px)
-        translateX(0px)
-        scale(0.6);
-
-        opacity:0;
-    }
-
-    15%{
-        opacity:0.45;
-    }
-
-    45%{
-        opacity:0.78;
-    }
-
-    100%{
-        transform:
-        translateY(-85px)
-        translateX(10px)
-        scale(1.45);
-
-        opacity:0;
-    }
-}
-
-/* recommend text */
+/* متن پایین */
 
 .recommend-text{
-
     position:absolute;
 
     bottom:12%;
 
-    left:73%;
+    left:72%;
 
     transform:translateX(-50%);
 
-    padding:12px 28px;
+    font-size:22px;
 
-    border-radius:40px;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    letter-spacing:5px;
+    letter-spacing:4px;
 
     color:white;
 
+    padding:14px 34px;
+
+    border-radius:40px;
+
     background:
-    linear-gradient(
-        90deg,
-        rgba(255,255,255,0.28),
-        rgba(255,220,120,0.18),
-        rgba(255,255,255,0.28)
-    );
+    rgba(255,255,255,0.18);
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(10px);
 
-    border:1px solid rgba(255,255,255,0.22);
+    border:
+    1px solid rgba(255,255,255,0.25);
 
     box-shadow:
-    0 0 18px rgba(255,220,120,0.18);
+    0 0 25px rgba(255,255,255,0.15);
 
-    white-space:nowrap;
+    font-weight:bold;
 
-    z-index:10;
+    text-transform:uppercase;
 }
 
-/* top message */
+/* متن طلایی بالا */
 
 .top-message{
-
     position:absolute;
 
-    top:9%;
+    top:7%;
 
-    left:28%;
+    left:8%;
 
-    transform:translateX(-50%);
+    font-size:28px;
 
-    font-size:13px;
+    letter-spacing:5px;
 
-    font-weight:700;
-
-    letter-spacing:3px;
-
-    color:rgba(255,225,150,0.98);
+    color:#f2d08a;
 
     text-shadow:
-    0 0 10px rgba(255,190,90,0.55),
-    0 0 24px rgba(255,190,90,0.28);
+    0 0 12px rgba(255,215,120,0.55);
 
-    white-space:nowrap;
-
-    z-index:9999;
-
-    animation:messageFade 6s infinite;
+    animation:
+    glowText 4s ease-in-out infinite;
 }
 
-@keyframes messageFade{
+@keyframes glowText{
 
     0%{
-        opacity:0;
-        transform:
-        translateX(-50%)
-        translateY(-8px);
+        opacity:0.4;
     }
 
-    15%{
-        opacity:1;
-    }
-
-    70%{
+    50%{
         opacity:1;
     }
 
     100%{
-        opacity:0;
+        opacity:0.4;
+    }
+}
+
+/* دود قوی */
+
+.smoke{
+    position:absolute;
+
+    width:140px;
+    height:140px;
+
+    background:
+    radial-gradient(
+        rgba(255,255,255,0.30),
+        rgba(255,255,255,0.08),
+        transparent
+    );
+
+    filter:blur(22px);
+
+    animation:
+    smokeMove 5s ease-in-out infinite;
+
+    pointer-events:none;
+}
+
+.smoke.left{
+    bottom:18%;
+    left:29%;
+}
+
+.smoke.right{
+    bottom:18%;
+    right:17%;
+}
+
+@keyframes smokeMove{
+
+    0%{
         transform:
-        translateX(-50%)
-        translateY(8px);
+        translateY(0px)
+        scale(1);
+
+        opacity:0.2;
+    }
+
+    50%{
+        transform:
+        translateY(-30px)
+        scale(1.2);
+
+        opacity:0.7;
+    }
+
+    100%{
+        transform:
+        translateY(-60px)
+        scale(1.4);
+
+        opacity:0;
     }
 }

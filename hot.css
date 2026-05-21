@@ -24,6 +24,7 @@ body{
     align-items:center;
 
     background:black;
+    padding-bottom:20px;
 }
 
 .menu-image{
@@ -40,8 +41,8 @@ body{
 
 .top-message{
     position:absolute;
-    top:70px;
-    left:120px;
+    top:90px;
+    left:90px;
 
     font-size:16px;
     color:#d4af37;

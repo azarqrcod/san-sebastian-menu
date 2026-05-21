@@ -38,29 +38,25 @@ body{
 
 /* متن بالا */
 
- .top-message{
+.top-message{
     position:absolute;
+    top:70px;
+    left:120px;
 
-    top:3%;
+    font-size:22px;
+    color:#d4af37;
 
-    left:8%;
-
-    font-size:14px;
-
-    letter-spacing:3px;
-
-    color:#d8b07a;
-
-    opacity:0;
+    letter-spacing:4px;
+    font-weight:600;
 
     text-shadow:
-    0 0 8px rgba(255,210,140,0.8),
-    0 0 20px rgba(255,210,140,0.4);
-
-    animation:fadeText 8s ease-in-out infinite;
+        0 0 8px rgba(212,175,55,0.7),
+        0 0 18px rgba(212,175,55,0.5);
 
     z-index:5;
- }
+
+    animation:fadeGlow 6s ease-in-out infinite;
+}
 
 /* متن پایین */
 

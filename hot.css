@@ -3,16 +3,26 @@ body{
     padding:0;
     background:black;
     overflow:hidden;
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .container{
     position:relative;
+
     width:100vw;
     height:100vh;
+
     overflow:hidden;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     background:black;
 }
 
@@ -27,93 +37,138 @@ body{
 
 .top-message{
     position:absolute;
+
     top:7%;
-    left:8%;
-    font-size:22px;
-    letter-spacing:6px;
+
+    left:6%;
+
+    font-size:18px;
+
+    letter-spacing:4px;
+
     color:#d8b07a;
+
     opacity:0;
-    animation:fadeMessage 8s infinite;
+
     text-shadow:
-        0 0 8px rgba(255,210,140,0.7),
-        0 0 18px rgba(255,210,140,0.4);
+    0 0 8px rgba(255,210,140,0.8),
+    0 0 20px rgba(255,210,140,0.4);
+
+    animation:fadeText 8s ease-in-out infinite;
+
+    z-index:5;
 }
 
 /* متن پایین */
 
 .recommend-text{
     position:absolute;
-    bottom:12%;
-    right:13%;
-    padding:14px 34px;
+
+    bottom:10%;
+
+    left:68%;
+
+    transform:translateX(-50%);
+
+    padding:14px 38px;
+
     border-radius:40px;
 
-    background:rgba(255,255,255,0.22);
+    background:rgba(255,255,255,0.18);
+
     backdrop-filter:blur(8px);
 
+    border:1px solid rgba(255,255,255,0.22);
+
     color:white;
-    font-size:22px;
-    letter-spacing:5px;
+
+    font-size:20px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
 
     box-shadow:
-        0 0 20px rgba(255,255,255,0.25);
+    0 0 20px rgba(255,255,255,0.15);
 
-    animation:pulse 3s infinite;
+    z-index:5;
 }
 
-/* دود */
+/* دود چپ */
 
-.smoke{
+.smoke.left{
     position:absolute;
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    background:rgba(255,255,255,0.12);
-    filter:blur(30px);
-    animation:smokeMove 6s infinite ease-in-out;
-}
 
-.left{
-    left:30%;
     bottom:18%;
+
+    left:32%;
+
+    width:120px;
+    height:180px;
+
+    background:radial-gradient(
+        rgba(255,255,255,0.55),
+        transparent 70%
+    );
+
+    filter:blur(25px);
+
+    opacity:0.9;
+
+    animation:smokeMove 5s ease-in-out infinite;
+
+    z-index:2;
 }
 
-.right{
+/* دود راست */
+
+.smoke.right{
+    position:absolute;
+
+    bottom:19%;
+
     right:18%;
-    bottom:18%;
+
+    width:120px;
+    height:180px;
+
+    background:radial-gradient(
+        rgba(255,255,255,0.55),
+        transparent 70%
+    );
+
+    filter:blur(25px);
+
+    opacity:0.9;
+
+    animation:smokeMove 6s ease-in-out infinite;
+
+    z-index:2;
 }
 
-@keyframes smokeMove{
-    0%{
-        transform:translateY(0) scale(1);
-        opacity:0;
-    }
+/* نور */
 
-    30%{
-        opacity:0.9;
-    }
+.spotlight{
+    position:absolute;
 
-    100%{
-        transform:translateY(-120px) scale(1.8);
-        opacity:0;
-    }
+    width:180px;
+    height:60px;
+
+    border-radius:50px;
+
+    background:rgba(255,220,120,0.35);
+
+    filter:blur(18px);
+
+    animation:moveLight 12s linear infinite;
+
+    z-index:1;
 }
 
-@keyframes pulse{
-    0%{
-        transform:scale(1);
-    }
+/* انیمیشن متن */
 
-    50%{
-        transform:scale(1.05);
-    }
+@keyframes fadeText{
 
-    100%{
-        transform:scale(1);
-    }
-}
-
-@keyframes fadeMessage{
     0%{
         opacity:0;
     }
@@ -128,5 +183,64 @@ body{
 
     100%{
         opacity:0;
+    }
+}
+
+/* انیمیشن دود */
+
+@keyframes smokeMove{
+
+    0%{
+        transform:
+        translateY(0)
+        scale(1);
+
+        opacity:0.5;
+    }
+
+    50%{
+        transform:
+        translateY(-35px)
+        scale(1.25);
+
+        opacity:1;
+    }
+
+    100%{
+        transform:
+        translateY(-70px)
+        scale(1.5);
+
+        opacity:0;
+    }
+}
+
+/* انیمیشن نور */
+
+@keyframes moveLight{
+
+    0%{
+        left:15%;
+        top:40%;
+    }
+
+    25%{
+        left:55%;
+        top:55%;
+    }
+
+    50%{
+        left:70%;
+        top:35%;
+    }
+
+    75%{
+        left:40%;
+        top:65%;
+    }
+
+    100%{
+        left:15%;
+        top:40%;
     }
 }

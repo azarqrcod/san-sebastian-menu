@@ -111,3 +111,58 @@ white-space:nowrap;
 z-index:9999;
 
 }
+.steam{
+    position:absolute;
+
+    width:80px;
+    height:80px;
+
+    background:radial-gradient(
+        rgba(255,255,255,0.16),
+        rgba(255,255,255,0)
+    );
+
+    border-radius:50%;
+
+    filter:blur(18px);
+
+    opacity:0;
+
+    animation:steamMove 6s infinite ease-out;
+
+    pointer-events:none;
+}
+
+.steam1{
+    bottom:17%;
+    left:30%;
+}
+
+.steam2{
+    bottom:18%;
+    left:77%;
+    animation-delay:3s;
+}
+
+@keyframes steamMove{
+
+    0%{
+        transform:
+        translateY(0px)
+        scale(0.7);
+
+        opacity:0;
+    }
+
+    20%{
+        opacity:0.22;
+    }
+
+    100%{
+        transform:
+        translateY(-80px)
+        scale(1.4);
+
+        opacity:0;
+    }
+}

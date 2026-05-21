@@ -149,7 +149,7 @@ z-index:9999;
 
     border-radius:50%;
 
-    filter:blur(28px);
+    filter:blur(20px);
 
     opacity:0;
 
@@ -183,16 +183,16 @@ z-index:9999;
     }
 
     15%{
-        opacity:0.10;
+        opacity:0.18;
     }
 
     45%{
-        opacity:0.16;
+        opacity:0.28;
     }
 
     100%{
         transform:
-        translateY(-120px)
+        translateY(-90px)
         translateX(12px)
         scale(1.8);
 

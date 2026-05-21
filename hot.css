@@ -14,24 +14,24 @@ body{
 }
 
 .container{
+    position:relative;
 
-    position:fixed;
+    width:100vw;
+    height:100vh;
 
-    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
     overflow:hidden;
 }
 
 .menu-image{
-
-    position:absolute;
-
-    inset:0;
-
-    width:100vw;
-    height:100vh;
-
+    width:100%;
+    height:100%;
     object-fit:contain;
+
+    display:block;
 }
 
 /* spotlight */

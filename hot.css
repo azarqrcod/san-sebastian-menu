@@ -2,27 +2,39 @@ body{
     margin:0;
     padding:0;
 
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
     background:black;
 
-    overflow:hidden;
-
     position:fixed;
-}
 
+    inset:0;
+}
 .container{
 
-    position:relative;
+    position:absolute;
+
+    inset:0;
 
     width:100vw;
     height:100vh;
 
     overflow:hidden;
-}
 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 .menu-image{
 
-    width:100vw;
-    height:100vh;
+    max-width:100vw;
+    max-height:100vh;
+
+    width:auto;
+    height:auto;
 
     object-fit:contain;
 

@@ -104,15 +104,18 @@ body{
 /* متن طلایی بالا */
 
 .top-message{
+
     position:absolute;
 
     top:7%;
 
     left:8%;
 
-    font-size:28px;
+    font-size:14px;
 
-    letter-spacing:5px;
+    white-space:nowrap;
+
+    letter-spacing:3px;
 
     color:#f2d08a;
 

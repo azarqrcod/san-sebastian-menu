@@ -69,13 +69,14 @@ z-index:9999;
 
 }
 
+
 .recommend-text{
 
 position:absolute;
 
-bottom:7%;
+left:66%;
 
-left:50%;
+bottom:15%;
 
 transform:translateX(-50%);
 
@@ -83,19 +84,25 @@ font-size:13px;
 
 letter-spacing:4px;
 
-color:rgba(255,220,150,0.95);
+font-weight:700;
 
-font-weight:600;
+color:rgba(255,245,220,0.98);
 
-text-shadow:0 0 10px rgba(255,180,80,0.45);
+padding:8px 18px;
 
-background:rgba(0,0,0,0.45);
+border-radius:30px;
 
-padding:6px 14px;
+background:rgba(255,255,255,0.10);
 
-border-radius:20px;
+border:1px solid rgba(255,255,255,0.18);
 
-backdrop-filter:blur(4px);
+backdrop-filter:blur(6px);
+
+box-shadow:
+0 0 12px rgba(255,255,255,0.08);
+
+text-shadow:
+0 0 8px rgba(255,190,90,0.35);
 
 pointer-events:none;
 

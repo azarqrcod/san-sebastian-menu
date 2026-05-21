@@ -35,16 +35,16 @@ body{
 
 /* متن بالا */
 
-.top-message{
+ .top-message{
     position:absolute;
 
-    top:7%;
+    top:3%;
 
-    left:6%;
+    left:8%;
 
-    font-size:18px;
+    font-size:14px;
 
-    letter-spacing:4px;
+    letter-spacing:3px;
 
     color:#d8b07a;
 
@@ -57,7 +57,7 @@ body{
     animation:fadeText 8s ease-in-out infinite;
 
     z-index:5;
-}
+ }
 
 /* متن پایین */
 

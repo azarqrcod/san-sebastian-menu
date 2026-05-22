@@ -13,7 +13,6 @@ body{
 
 .container{
     position:relative;
-
     width:100vw;
     height:100vh;
 
@@ -24,10 +23,9 @@ body{
     align-items:center;
 
     background:black;
-    padding-bottom:20px;
-    overflow:hidden;
-padding:20px;
-box-sizing:border-box;
+
+    padding:20px;
+    box-sizing:border-box;
 }
 
 .menu-image{
@@ -35,8 +33,6 @@ box-sizing:border-box;
     height:100%;
     object-fit:contain;
     display:block;
-    
-    transform:translateY(-10px);
 }
 
 

@@ -1,29 +1,30 @@
-const hour = new Date().getHours();
+const pages = [
+    "/hot/",
+    "/cold/",
+    "/cake/"
+];
 
-if(hour >= 6 && hour < 12){
+const currentPath =
+window.location.pathname;
 
-    document.body.style.filter =
-    "brightness(1.05) saturate(1.05)";
+let currentIndex =
+pages.indexOf(currentPath);
 
+if(currentIndex === -1){
+    currentIndex = 0;
 }
 
-else if(hour >= 12 && hour < 18){
+setTimeout(() => {
 
-    document.body.style.filter =
-    "brightness(1) saturate(1)";
+    window.location.href = "/logo/";
 
-}
+}, 600000);
 
-else if(hour >= 18 && hour < 23){
+if(currentPath === "/logo/"){
 
-    document.body.style.filter =
-    "brightness(0.92) sepia(0.08)";
+    setTimeout(() => {
 
-}
+        window.location.href = "/hot/";
 
-else{
-
-    document.body.style.filter =
-    "brightness(0.82) sepia(0.15)";
-
+    }, 4000);
 }

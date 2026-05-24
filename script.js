@@ -1,14 +1,18 @@
 const overlay =
 document.querySelector(".logo-overlay");
 
-setInterval(() => {
+if (overlay) {
 
-    overlay.classList.add("show");
+    setInterval(() => {
 
-    setTimeout(() => {
+        overlay.classList.add("show");
 
-        overlay.classList.remove("show");
+        setTimeout(() => {
 
-    }, 5000);
+            overlay.classList.remove("show");
 
-}, 300000);
+        }, 5000);
+
+    }, 300000);
+
+}

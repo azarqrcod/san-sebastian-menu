@@ -1,30 +1,14 @@
-const pages = [
-    "/hot/",
-    "/cold/",
-    "/cake/"
-];
+const overlay =
+document.querySelector(".logo-overlay");
 
-const currentPath =
-window.location.pathname;
+setInterval(() => {
 
-let currentIndex =
-pages.indexOf(currentPath);
-
-if(currentIndex === -1){
-    currentIndex = 0;
-}
-
-setTimeout(() => {
-
-    window.location.href = "/logo/";
-
-}, 600000);
-
-if(currentPath === "/logo/"){
+    overlay.classList.add("show");
 
     setTimeout(() => {
 
-        window.location.href = "/hot/";
+        overlay.classList.remove("show");
 
     }, 4000);
-}
+
+}, 600000);

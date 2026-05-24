@@ -9,7 +9,6 @@ setInterval(() => {
 
         overlay.classList.remove("show");
 
-    }, 4000);
+    }, 5000);
 
-}, 600000);
-
+}, 300000);
